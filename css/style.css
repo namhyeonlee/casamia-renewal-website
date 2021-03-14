@@ -586,7 +586,7 @@ header .headTop .mobileNav form a {
 #events .eventWrap .eventLeft .events li .eventText {
   position: absolute;
   bottom: 30px;
-  left: 30px;
+  left: 20px;
 }
 #events .eventWrap .eventLeft .events li .eventText p {
   color: blanchedalmond;
@@ -596,6 +596,14 @@ header .headTop .mobileNav form a {
   color: white;
   font-size: 28px;
   margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  #events .eventWrap .eventLeft .events li .eventText p {
+    font-size: 12px;
+  }
+  #events .eventWrap .eventLeft .events li .eventText h3 {
+    font-size: 23px;
+  }
 }
 #events .eventWrap .eventLeft .events li:nth-child(1) a {
   background-image: url(../imgs/event1.jpg);
@@ -639,10 +647,10 @@ header .headTop .mobileNav form a {
   text-align: center;
 }
 #events .eventWrap .eventRight .eventList li {
-  margin: 50px 0;
+  margin: 45px 0;
 }
 #events .eventWrap .eventRight .eventList li a {
-  font-size: 50px;
+  font-size: 45px;
   font-family: "canelaItalic";
   -webkit-text-stroke: 1px #c1c797;
   color: transparent;
@@ -653,6 +661,14 @@ header .headTop .mobileNav form a {
 @media screen and (max-width: 767px) {
   #events .eventWrap .eventRight .eventList li {
     margin: 40px 0;
+  }
+  #events .eventWrap .eventRight .eventList li a {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #events .eventWrap .eventRight .eventList li {
+    margin: 30px 0;
   }
   #events .eventWrap .eventRight .eventList li a {
     font-size: 25px;
