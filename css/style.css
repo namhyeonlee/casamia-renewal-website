@@ -21,7 +21,10 @@ button {
 
 /* header */
 header {
+  position: fixed;
+  z-index: 10000;
   background-color: black;
+  width: 100%;
   height: 80px;
   min-width: 1200px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -91,11 +94,61 @@ header .headTop .headTop_mobile li a {
   color: white;
   font-size: 20px;
 }
+header .headTop .mobileNav {
+  display: none;
+  width: 300px;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+}
+@media screen and (max-width: 767px) {
+  header .headTop .mobileNav {
+    display: block;
+    margin-left: -100%;
+  }
+}
+header .headTop .mobileNav .closeBtn {
+  font-size: 20px;
+  padding: 18px;
+  color: white;
+}
+header .headTop .mobileNav .mobileNavbars {
+  margin-top: 20px;
+}
+header .headTop .mobileNav .mobileNavbars li {
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+header .headTop .mobileNav .mobileNavbars li:hover {
+  background-color: rgba(247, 246, 232, 0.5);
+}
+header .headTop .mobileNav .mobileNavbars li a {
+  font-size: 15px;
+  color: white;
+}
+header .headTop .mobileNav form input {
+  margin-left: 10px;
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+header .headTop .mobileNav form a {
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+}
 
 /* headbottom */
 .headBottom {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
   height: 50px;
+  margin-top: 80px;
   background-color: black;
   min-width: 1200px;
 }
@@ -111,6 +164,9 @@ header .headTop .headTop_mobile li a {
 .headBottom .center .menu a {
   color: white;
   font-size: 15px;
+}
+.headBottom .center .menu i {
+  padding-right: 5px;
 }
 .headBottom .center #nav {
   margin-left: 200px;
@@ -217,6 +273,8 @@ header .headTop .headTop_mobile li a {
   height: 700px;
   background-color: #f7f6e8;
   min-width: 1200px;
+  position: relative;
+  padding-top: 120px;
 }
 @media screen and (max-width: 767px) {
   #mainBanner {
@@ -342,26 +400,27 @@ header .headTop .headTop_mobile li a {
 }
 #mainBanner .circleBtn {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   right: 20%;
   display: flex;
 }
 @media screen and (max-width: 767px) {
   #mainBanner .circleBtn {
     left: 20px;
+    bottom: 30px;
   }
 }
 @media screen and (max-width: 640px) {
   #mainBanner .circleBtn {
     left: 10px;
-    bottom: 20px;
+    bottom: 50px;
   }
 }
 #mainBanner .circleBtn li {
   width: 50px;
   height: 15px;
   border-radius: 5px;
-  background-color: #ffb4b4;
+  background-color: #c8d1c5;
   margin-left: 10px;
 }
 #mainBanner .circleBtn li a {
@@ -371,7 +430,7 @@ header .headTop .headTop_mobile li a {
   text-indent: -9999px;
 }
 #mainBanner .circleBtn .active {
-  background-color: #3d3551;
+  background-color: #383e56;
 }
 
 /* best products */
@@ -467,10 +526,12 @@ header .headTop .headTop_mobile li a {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: pink;
 }
 #bestProducts .bestBtn button {
-  margin-right: 10px;
+  margin-right: 5px;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
 }
 @media screen and (max-width: 767px) {
   #bestProducts .bestBtn {
@@ -484,6 +545,11 @@ header .headTop .headTop_mobile li a {
   height: 600px;
   display: flex;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08);
+}
+@media screen and (max-width: 767px) {
+  #events .eventWrap {
+    height: 450px;
+  }
 }
 #events .eventWrap .eventLeft {
   width: 65%;
@@ -505,6 +571,10 @@ header .headTop .headTop_mobile li a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: none;
+}
+#events .eventWrap .eventLeft .events li:first-child {
+  display: block;
 }
 #events .eventWrap .eventLeft .events li a {
   display: block;
@@ -512,6 +582,20 @@ header .headTop .headTop_mobile li a {
   height: 100%;
   background-position: center center;
   background-size: cover;
+}
+#events .eventWrap .eventLeft .events li .eventText {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+#events .eventWrap .eventLeft .events li .eventText p {
+  color: blanchedalmond;
+  font-size: 15px;
+}
+#events .eventWrap .eventLeft .events li .eventText h3 {
+  color: white;
+  font-size: 28px;
+  margin-top: 10px;
 }
 #events .eventWrap .eventLeft .events li:nth-child(1) a {
   background-image: url(../imgs/event1.jpg);
@@ -568,10 +652,10 @@ header .headTop .headTop_mobile li a {
 }
 @media screen and (max-width: 767px) {
   #events .eventWrap .eventRight .eventList li {
-    margin: 30px 0;
+    margin: 40px 0;
   }
   #events .eventWrap .eventRight .eventList li a {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -612,6 +696,11 @@ header .headTop .headTop_mobile li a {
   height: 600px;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  #goods .wrap {
+    margin-bottom: 400px;
+  }
+}
 #goods .goodsWrap {
   width: 100%;
   height: 100%;
@@ -627,6 +716,11 @@ header .headTop .headTop_mobile li a {
   margin-bottom: -1px;
   position: relative;
   transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  #goods .goodsWrap > li {
+    width: 49.73%;
+  }
 }
 #goods .goodsWrap > li::before {
   display: block;
@@ -762,6 +856,7 @@ header .headTop .headTop_mobile li a {
   #brands .brandWrap {
     flex-wrap: wrap;
     height: 1000px;
+    margin-bottom: 50px;
   }
 }
 #brands .brandWrap li {
@@ -842,6 +937,7 @@ footer {
 @media screen and (max-width: 767px) {
   footer {
     min-width: 100%;
+    height: auto;
   }
 }
 footer .center {
@@ -885,6 +981,11 @@ footer .footLeft .snsWrap li a {
 footer .footRight {
   color: white;
   font-size: 15px;
+}
+@media screen and (max-width: 767px) {
+  footer .footRight {
+    display: none;
+  }
 }
 footer .footRight .tel {
   margin: 40px 0 10px 0;

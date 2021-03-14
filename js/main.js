@@ -19,7 +19,20 @@ $(function () {
             .fadeIn(100).siblings("ul").fadeOut(100);
          $(".category__imgs>div").eq(categoryOrder)
             .fadeIn(100).siblings("div").fadeOut(100);
-})    
+    })    
+    
+
+//mobile nav slide
+    $(".mobileNavBtn").click(function () {
+        $(".mobileNav").stop().animate({
+            "margin-left": 0
+        },1200)
+    })
+    $(".closeBtn").click(function () {
+        $(".mobileNav").stop().animate({
+            "margin-left": "-100%"
+        },1200)
+    })
     
 //mainBanner fade slide
     
@@ -33,6 +46,32 @@ $(function () {
         .siblings().stop()
             .animate({ opacity: 0 }, 500)
     });
+
+    //auto banner
+    var showBanner = 0;
+    function autoBanner() {
+        if (showBanner < 2) {
+            showBanner++;
+        } else {
+            showBanner = 0;
+        }
+        $(".circleBtn>li").eq(showBanner).addClass("active")
+            .siblings("li").removeClass("active")
+        
+         $(".bannerWrap>.banner").eq(showBanner).stop()
+            .animate({ opacity: 1 }, 500)
+        .siblings().stop()
+            .animate({ opacity: 0 }, 500)
+        
+    }
+    var timer = setInterval(autoBanner, 1500)
+    
+    $(".bannerWrap").mouseover(function () {
+        clearInterval(timer);
+    })
+    $("bannerWrap").mouseout(function () {
+        timer = setInterval(autoBanner,1500)
+    })
     
     
 
