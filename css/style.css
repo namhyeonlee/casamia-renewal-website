@@ -458,8 +458,6 @@ header .headTop .mobileNav form a {
 #bestProducts .productWrap .products li {
   width: 24%;
   height: 100%;
-  padding: 10px;
-  box-sizing: border-box;
 }
 @media screen and (max-width: 767px) {
   #bestProducts .productWrap .products li {
@@ -468,20 +466,23 @@ header .headTop .mobileNav form a {
 }
 #bestProducts .productWrap .products li a {
   display: block;
-  width: 100%;
+  width: 80%;
   height: 70%;
+  margin: 0 auto;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 #bestProducts .productWrap .products li .productText {
-  width: 100%;
+  width: 80%;
   height: 28%;
-  padding: 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 #bestProducts .productWrap .products li .productText .productTitle {
   font-size: 15px;
+  height: 40px;
 }
 #bestProducts .productWrap .products li .productText .brand {
   padding-top: 5px;
@@ -491,6 +492,9 @@ header .headTop .mobileNav form a {
 #bestProducts .productWrap .products li .productText .price {
   font-weight: bolder;
   padding-top: 5px;
+}
+#bestProducts .productWrap .products li .productText .price .like {
+  padding-left: 10px;
 }
 #bestProducts .productWrap .products li:nth-child(1) a {
   background-image: url(../imgs/b1.jpg);

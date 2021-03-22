@@ -505,6 +505,7 @@ header{
          }
 
         .banner2 {
+            // opacity: 1;
              .bannerRight {
                  background-image: url(../imgs/mainbanner2.jpg);
 
@@ -593,8 +594,6 @@ header{
             li{
                 width: 24%;
                 height: 100%;
-                padding: 10px;
-                box-sizing: border-box;
                 @include media($mobile) {
                     width: 50%;
                     
@@ -603,8 +602,9 @@ header{
                 
                 a{
                     display: block;
-                    width: 100%;
+                    width: 80%;
                     height: 70%;
+                    margin: 0 auto;
                   
                     
                     background-position: center center;
@@ -613,13 +613,15 @@ header{
 
                 }
                 .productText{
-                   width: 100%;
+                   width: 80%;
                    height: 28%;
-                   padding: 20px;
+                   padding: 10px 20px;
                    box-sizing: border-box;
+                   margin: 0 auto;
                   
                     .productTitle{
                         font-size:$font-md;
+                        height: 40px;
                     }
                     .brand{
                         padding-top: 5px;
@@ -629,6 +631,11 @@ header{
                     .price{
                         font-weight: bolder;
                         padding-top: 5px;
+                        
+                        .like{
+                            padding-left: 10px;
+                        }
+
                     }
                     
                 }
@@ -890,7 +897,6 @@ header{
             margin-bottom: 400px;
             
 
-
         }
 
     }
@@ -912,6 +918,7 @@ header{
             background-color: $white;
             @include media($mobile) {
                 width: 49.73%;
+                
          
             }
             :hover{
