@@ -283,7 +283,7 @@ header .headTop .mobileNav form a {
 @media screen and (max-width: 767px) {
   #mainBanner {
     min-width: 100%;
-    height: 70vw;
+    height: 80vw;
   }
 }
 #mainBanner .bannerWrap {
@@ -311,6 +311,11 @@ header .headTop .mobileNav form a {
 @media screen and (max-width: 640px) {
   #mainBanner .bannerWrap .banner {
     height: 230px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #mainBanner .bannerWrap .banner {
+    padding-top: 0;
   }
 }
 #mainBanner .bannerWrap .banner .bannerLeft {
@@ -418,6 +423,11 @@ header .headTop .mobileNav form a {
   #mainBanner .circleBtn {
     left: 10px;
     bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #mainBanner .circleBtn {
+    bottom: 20px;
   }
 }
 #mainBanner .circleBtn li {

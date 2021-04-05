@@ -366,7 +366,7 @@ header{
 
     @include media($mobile) {
         min-width: 100%;
-        height: 70vw;
+        height: 80vw;
 
     }
    
@@ -375,7 +375,6 @@ header{
         height: 100%;
          @include media($mobile) {
              height: 90%;
-
          }
         
         
@@ -393,8 +392,12 @@ header{
               height: 400px;
 
           }
-           @include media($mobile640) {
-               height: 230px;
+          @include media($mobile640) {
+              height: 230px;
+          }
+           @include media(400px) {
+               padding-top: 0;
+              
            }
              .bannerLeft {
                  width: 50%;
@@ -538,6 +541,9 @@ header{
          @include media($mobile640) {
              left: 10px;
              bottom: 50px;
+         }
+         @include media(400px) {
+             bottom: 20px;
          }
 
          li {
