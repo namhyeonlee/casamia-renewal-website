@@ -283,17 +283,12 @@ header .headTop .mobileNav form a {
 @media screen and (max-width: 767px) {
   #mainBanner {
     min-width: 100%;
-    height: 80vw;
+    height: 90vw;
   }
 }
 #mainBanner .bannerWrap {
   position: relative;
   height: 100%;
-}
-@media screen and (max-width: 767px) {
-  #mainBanner .bannerWrap {
-    height: 90%;
-  }
 }
 #mainBanner .bannerWrap .banner {
   display: flex;
@@ -347,11 +342,21 @@ header .headTop .mobileNav form a {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 360px) {
+  #mainBanner .bannerWrap .banner .bannerLeft .bannerText h2 {
+    font-size: 20px;
+  }
+}
 #mainBanner .bannerWrap .banner .bannerLeft .bannerText p {
   width: 95%;
   font-size: 15px;
   color: #333232;
   line-height: 1.5;
+}
+@media screen and (max-width: 640px) {
+  #mainBanner .bannerWrap .banner .bannerLeft .bannerText p {
+    font-size: 12px;
+  }
 }
 #mainBanner .bannerWrap .banner .bannerLeft .bannerText .showmore {
   margin-top: 50px;
@@ -569,10 +574,21 @@ header .headTop .mobileNav form a {
     height: 450px;
   }
 }
+@media screen and (max-width: 640px) {
+  #events .eventWrap {
+    flex-wrap: wrap;
+  }
+}
 #events .eventWrap .eventLeft {
   width: 65%;
   height: 100%;
   position: relative;
+}
+@media screen and (max-width: 640px) {
+  #events .eventWrap .eventLeft {
+    width: 100%;
+    height: 50%;
+  }
 }
 #events .eventWrap .eventLeft .events {
   width: 100%;
@@ -659,10 +675,21 @@ header .headTop .mobileNav form a {
   height: 100%;
   background-color: rgba(247, 246, 232, 0.5);
 }
+@media screen and (max-width: 640px) {
+  #events .eventWrap .eventRight {
+    width: 100%;
+    height: 50%;
+  }
+}
 #events .eventWrap .eventRight .eventList {
   margin: 0 auto;
   padding-top: 30px;
   text-align: center;
+}
+@media screen and (max-width: 640px) {
+  #events .eventWrap .eventRight .eventList {
+    padding: 0;
+  }
 }
 #events .eventWrap .eventRight .eventList li {
   margin: 45px 0;
@@ -690,6 +717,14 @@ header .headTop .mobileNav form a {
   }
   #events .eventWrap .eventRight .eventList li a {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #events .eventWrap .eventRight .eventList li {
+    margin: 20px 0;
+  }
+  #events .eventWrap .eventRight .eventList li a {
+    font-size: 18px;
   }
 }
 
@@ -720,6 +755,11 @@ header .headTop .mobileNav form a {
   font-size: 15px;
   font-family: "gill";
   color: #444343;
+}
+@media screen and (max-width: 640px) {
+  #goods .goodsTab li a {
+    font-size: 12px;
+  }
 }
 #goods .goodsTab .active {
   background-color: cadetblue;
@@ -754,6 +794,11 @@ header .headTop .mobileNav form a {
 @media screen and (max-width: 767px) {
   #goods .goodsWrap > li {
     width: 49.73%;
+  }
+}
+@media screen and (max-width: 640px) {
+  #goods .goodsWrap > li {
+    width: 49.59%;
   }
 }
 #goods .goodsWrap > li :hover {
@@ -950,6 +995,12 @@ header .headTop .mobileNav form a {
     height: 250px;
   }
 }
+@media screen and (max-width: 360px) {
+  #brands .brandWrap li a .brandImg {
+    width: 130px;
+    height: 230px;
+  }
+}
 #brands .brandWrap li a .brandText {
   margin: 0 auto;
   width: 200px;
@@ -958,6 +1009,11 @@ header .headTop .mobileNav form a {
 @media screen and (max-width: 640px) {
   #brands .brandWrap li a .brandText {
     width: 150px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #brands .brandWrap li a .brandText {
+    width: 130px;
   }
 }
 #brands .brandWrap li a .brandText .brandTitle {
